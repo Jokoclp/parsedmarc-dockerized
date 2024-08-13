@@ -7,7 +7,7 @@ This stack is based on [patschi's work](https://github.com/patschi/parsedmarc-do
 ## Setup:
 1. Get basics together:
 ```
-git clone https://github.com/accolon/parsedmarc-dockerized.git /opt/parsedmarc-dockerized/
+git clone https://github.com/Jokoclp/parsedmarc-dockerized.git /opt/parsedmarc-dockerized/
 cd /opt/parsedmarc-dockerized/ && cp data/conf/parsedmarc/config.sample.ini data/conf/parsedmarc/config.ini
 ```
 
