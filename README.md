@@ -1,8 +1,6 @@
 # parsedmarc-dockerized
 
-Note: The standalone `parsedmarc` docker image on [DockerHub @ accolon/parsedmarc](https://hub.docker.com/r/accolon/parsedmarc) can also be used, if interested.
-
-This stack is based on [patschi's work](https://github.com/patschi/parsedmarc-dockerized) but also builds for and runs on ARM64 systems, e.g. the OCI Cloud Free Tier with Ampere CPUs. It includes a few other tweaks, too: It's running on port 443 by default (can be changed in `docker-compose.yml`) and has HTTP basic authentication enabled (default user/pw is admin/admin).
+elasticsearch:8.13.2 & kibana:8.13.2
 
 ## Setup:
 1. Get basics together:
