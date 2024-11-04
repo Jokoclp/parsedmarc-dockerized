@@ -1,6 +1,10 @@
 # parsedmarc-dockerized
 
+old Version für Rollback:
 elasticsearch:8.13.2 & kibana:8.13.2
+
+
+currently 8.15.0 & 8.15.0
 
 ## Setup:
 1. Get basics together:
