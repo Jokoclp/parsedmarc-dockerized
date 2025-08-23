@@ -4,7 +4,7 @@ old Version für Rollback:
 elasticsearch:8.13.2 & kibana:8.13.2
 
 
-currently 8.15.0 & 8.15.0
+currently 8.17.0 & 8.17.0
 
 ## Setup:
 1. Get basics together:
@@ -43,3 +43,4 @@ docker-compose up -d
 ## Credits
 
 Built with awesome [parsedmarc](https://github.com/domainaware/checkdmarc), [Elasticsearch and Kibana](https://www.elastic.co/), [nginx](https://nginx.org), [Docker](https://docker.com) and [MaxMind GeoIP](https://dev.maxmind.com/geoip/geoip2/geolite2/). Based on [patschi's work](https://github.com/patschi/parsedmarc-dockerized).
+
