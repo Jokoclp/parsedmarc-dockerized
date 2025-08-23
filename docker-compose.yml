@@ -1,6 +1,6 @@
 services:
   parsedmarc-init:
-    image: accolon/parsedmarc:init
+    image: jokoclp/parsedmarc:init
     restart: always
     volumes:
       - ./data/conf/parsedmarc/:/etc/parsedmarc/:rw
@@ -113,3 +113,4 @@ services:
 networks:
   parsedmarc-network:
     driver: bridge
+
