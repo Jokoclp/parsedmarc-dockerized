@@ -7,7 +7,7 @@ elasticsearch:8.13.2 & kibana:8.13.2
 currently 8.17.0 & 8.17.0
 
 ## Setup:
-PARSEDMARC 8.13 install guide - ubuntu 22.04 / Abweichend bei anderen Distributionen
+PARSEDMARC 8.17 install guide - ubuntu 22.04 / Abweichend bei anderen Distributionen
 
 root user
 ```sudo bash```
@@ -74,6 +74,7 @@ mit htpasswd User und dazugehörigem Passwort anmelden.
 Built with [parsedmarc](https://github.com/domainaware/checkdmarc), [Elasticsearch and Kibana](https://www.elastic.co/), [nginx](https://nginx.org), [Docker](https://docker.com) and [MaxMind GeoIP](https://dev.maxmind.com/geoip/geoip2/geolite2/). 
 
 Based on [patschi's docker container](https://github.com/patschi/parsedmarc-dockerized) & [accolons](https://github.com/accolon/parsedmarc-dockerized) work.
+
 
 
 
