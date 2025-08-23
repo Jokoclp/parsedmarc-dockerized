@@ -7,31 +7,47 @@ elasticsearch:8.13.2 & kibana:8.13.2
 currently 8.17.0 & 8.17.0
 
 ## Setup:
-1. Get basics together:
-```
+## PARSEDMARC 8.13 install guide - ubuntu 22.04 / Abweichend bei anderen Distributionen
+
+# root user
+sudo bash
+
+# Download und Installation docker & docker compose-plugin
+curl -sSL https://get.docker.com/ | CHANNEL=stable sh
+systemctl enable --now docker
+apt install docker-compose-plugin
+
+
+# Download der Repository für  elasticsearch:8.13.2 & kibana:8.13.2
 git clone https://github.com/Jokoclp/parsedmarc-dockerized.git /opt/parsedmarc-dockerized/
+
+# Sample ini zu ini
 cd /opt/parsedmarc-dockerized/ && cp data/conf/parsedmarc/config.sample.ini data/conf/parsedmarc/config.ini
-```
 
-2. Next we change the `parsedmarc` config (see [docs](https://domainaware.github.io/parsedmarc/#configuration-file). You can set `Test` to `True` for testing purposes.)
-```
-nano data/conf/parsedmarc/config.ini
-```
+# config editieren
+nano /opt/parsedmarc-dockerized/data/conf/parsedmarc/config.ini
 
-3. Add your geoipupdate credentials from your [MaxMind account](https://www.maxmind.com/en/account/) to allow the container to pull the databases. For update cycles of the databases, please see [here](https://support.maxmind.com/hc/en-us/articles/4408216129947).
-```
+
+# GEOIPUPDATE ja / nein? (sorgt für die korrekte Anzeige der Karte -> IP zu Geolocation)
+# wenn ja ->  
 nano data/conf/geoipupdate/geoipupdate.env
-```
 
-4. Change credentials for HTTP basic auth, e.g. this way (needs apache2-utils or httpd-tools):
-```
+# installation von apache utilitys & nginx proxy benutzer anlegen (USERNAME ändern)
+apt install apache2-utils
 htpasswd -c data/conf/nginx/htpasswd USERNAME
-```
 
-5. Finally, we start up the stack and wait:
-```
-docker-compose up -d
-```
+
+# Container starten
+cd /opt/parsedmarc-dockerized/
+docker compose up -d
+
+# Warten bis alle Container Healthy & Running sind (kann ein bisschen dauern)
+# https://HOSTIP/
+# mit htpasswd User und dazugehörigem Passwort anmelden.
+
+
+
+
 
 ### What's happening then?
 
@@ -44,6 +60,7 @@ docker-compose up -d
 
 Built with [parsedmarc](https://github.com/domainaware/checkdmarc), [Elasticsearch and Kibana](https://www.elastic.co/), [nginx](https://nginx.org), [Docker](https://docker.com) and [MaxMind GeoIP](https://dev.maxmind.com/geoip/geoip2/geolite2/). 
 
-Based on [patschi's docker container](https://github.com/patschi/parsedmarc-dockerized).
+Based on [patschi's docker container](https://github.com/patschi/parsedmarc-dockerized) & [accolons](https://github.com/accolon/parsedmarc-dockerized) work.
+
 
 
