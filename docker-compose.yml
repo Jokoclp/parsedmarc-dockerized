@@ -17,7 +17,7 @@ services:
       start_period: 10s
 
   parsedmarc:
-    image: accolon/parsedmarc:latest
+    image: jokoclp/parsedmarc:latest
     volumes:
       - ./data/conf/parsedmarc/:/etc/parsedmarc/
       - ./data/data/geoipupdate/:/usr/share/GeoIP:z,ro
@@ -113,4 +113,5 @@ services:
 networks:
   parsedmarc-network:
     driver: bridge
+
 
