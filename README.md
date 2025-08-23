@@ -29,7 +29,8 @@ config editieren
 
 
 GEOIPUPDATE ja / nein? (sorgt für die korrekte Anzeige der Karte -> IP zu Geolocation)
-wenn ja ->  ```nano data/conf/geoipupdate/geoipupdate.env```
+wenn ja ->  
+```nano data/conf/geoipupdate/geoipupdate.env```
 
 installation von apache utilitys & nginx proxy benutzer anlegen (USERNAME ändern)
 ```apt install apache2-utils
@@ -60,6 +61,7 @@ mit htpasswd User und dazugehörigem Passwort anmelden.
 Built with [parsedmarc](https://github.com/domainaware/checkdmarc), [Elasticsearch and Kibana](https://www.elastic.co/), [nginx](https://nginx.org), [Docker](https://docker.com) and [MaxMind GeoIP](https://dev.maxmind.com/geoip/geoip2/geolite2/). 
 
 Based on [patschi's docker container](https://github.com/patschi/parsedmarc-dockerized) & [accolons](https://github.com/accolon/parsedmarc-dockerized) work.
+
 
 
 
